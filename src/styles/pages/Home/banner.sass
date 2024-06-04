@@ -1,0 +1,49 @@
+@use '../../variables'
+@use '../../mixins'
+
+#banner-container
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 395px
+  display: flex
+  flex-direction: column
+
+.banner
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+#details
+  position: absolute
+  top: 52px
+  left: 250px
+  width: 100%
+  max-width: 800px
+  text-align: start
+  color: variables.$white
+
+  div
+    display: flex
+    flex-direction: column
+    gap: 16px
+    margin-bottom: 35px
+
+  h2
+    font-weight: variables.$font-semibold
+    font-size: variables.$text-5xl
+
+  p
+    font-weight: variables.$font-semibold
+    font-size: variables.$text-3xl
+
+  .see-product-button
+    @include mixins.btn
+    padding: 16px 55px
+    border-radius: variables.$rounded
+    font-weight: variables.$font-semibold
+    font-size: variables.$text-lg
