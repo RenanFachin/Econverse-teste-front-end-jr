@@ -3,10 +3,12 @@ import '../../styles/pages/Home/home.sass'
 import { Helmet } from 'react-helmet-async'
 
 import { Banner } from '../../components/banner'
-import { CategoryCard } from '../../components/CategoryCard/category-card'
-import { ProductsTable } from '../../components/ProductTable/products-table'
-import { Separator } from '../../components/Separator/separator'
+import { CategoryCard } from '../../components/CategoryCard'
+import { ProductCard } from '../../components/ProductCard'
+import { ProductsTable } from '../../components/ProductTable'
+import { Separator } from '../../components/Separator'
 import { CARDS_CATEGORIES } from '../../utils/cardsCategories'
+import { PRODUCTS } from '../../utils/productsData'
 
 export function Home() {
   return (
@@ -28,6 +30,18 @@ export function Home() {
       <Separator />
 
       <ProductsTable />
+
+      <section className="products-container">
+        {PRODUCTS &&
+          PRODUCTS.map((product) => (
+            <ProductCard
+              key={product.productName}
+              photo={product.photo}
+              productName={product.productName}
+              price={product.price}
+            />
+          ))}
+      </section>
     </div>
   )
 }
