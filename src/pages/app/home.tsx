@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async'
 
 import { Banner } from '../../components/banner'
 import { CategoryCard } from '../../components/CategoryCard'
-import { ProductCard } from '../../components/ProductCard'
+import { ProductsCarousel } from '../../components/ProductsCarousel'
 import { ProductsTable } from '../../components/ProductTable'
 import { Separator } from '../../components/Separator'
 import { CARDS_CATEGORIES } from '../../utils/cardsCategories'
@@ -32,15 +32,7 @@ export function Home() {
       <ProductsTable />
 
       <section className="products-container">
-        {PRODUCTS &&
-          PRODUCTS.map((product) => (
-            <ProductCard
-              key={product.productName}
-              photo={product.photo}
-              productName={product.productName}
-              price={product.price}
-            />
-          ))}
+        <ProductsCarousel products={PRODUCTS} />
       </section>
     </div>
   )

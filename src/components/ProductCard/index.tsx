@@ -2,7 +2,7 @@ import '../../styles/components/ProductCard/productCard.sass'
 
 import { Button } from '../button'
 
-interface ProductCardProps {
+export interface ProductCardProps {
   photo: string
   productName: string
   price: number
