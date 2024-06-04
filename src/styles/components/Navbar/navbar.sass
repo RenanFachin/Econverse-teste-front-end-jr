@@ -1,0 +1,27 @@
+@use '../../variables'
+@use '../../mixins'
+
+nav
+  color: variables.$gray-500
+  font-weight: variables.$font-semibold
+  font-size: variables.$text-xs
+  text-transform: uppercase
+  margin: 10px 0px
+
+  ul
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-left: 56px
+    padding-right: 83px
+
+    li
+      @include mixins.center
+      cursor: pointer          
+
+      &.selected
+        color: variables.$pink-500
+      
+      &.withIcon
+        gap: 12px

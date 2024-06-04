@@ -18,10 +18,6 @@ type SearchProductFormData = z.infer<typeof searchProductFormSchema>
 export function Input() {
   const [isInputFocused, setIsInputFocused] = useState<boolean>(false)
 
-  function handleInputFocus() {
-    setIsInputFocused((prev) => !prev)
-  }
-
   const { register, handleSubmit } = useForm<SearchProductFormData>({
     resolver: zodResolver(searchProductFormSchema),
   })
@@ -41,7 +37,8 @@ export function Input() {
         type="text"
         placeholder="O que você está buscando?"
         aria-label="Campo de busca de produtos"
-        onFocus={handleInputFocus}
+        onFocus={() => setIsInputFocused(true)}
+        onBlur={() => setIsInputFocused(false)}
       />
 
       <button type="submit">
