@@ -1,4 +1,4 @@
-import '../styles/components/separator.sass'
+import '../../styles/components/Separator/separator.sass'
 
 import { Link } from 'react-router-dom'
 

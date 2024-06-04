@@ -1,4 +1,4 @@
-import '../styles//components/CategoryCard/category-card.sass'
+import '../../styles/components/CategoryCard/category-card.sass'
 
 import { Link } from 'react-router-dom'
 

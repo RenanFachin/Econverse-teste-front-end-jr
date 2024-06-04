@@ -1,0 +1,23 @@
+@use '../../variables'
+@use '../../mixins'
+
+.product-table-item
+  @include mixins.center
+  border: 0.5px solid variables.$gray-300
+  width: 100%
+  justify-content: center
+  height: 40px
+  color: gray-800
+  text-transform: uppercase
+  cursor: pointer
+
+  &.product-selected
+    color: variables.$pink-500
+    font-weight: variables.$font-bold
+
+  &:hover
+    background-color: variables.$gray-200
+
+#products-table-container
+  @include mixins.center
+  margin-top: 8px

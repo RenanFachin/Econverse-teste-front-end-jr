@@ -3,8 +3,9 @@ import '../../styles/pages/Home/home.sass'
 import { Helmet } from 'react-helmet-async'
 
 import { Banner } from '../../components/banner'
-import { CategoryCard } from '../../components/category-card'
-import { Separator } from '../../components/separator'
+import { CategoryCard } from '../../components/CategoryCard/category-card'
+import { ProductsTable } from '../../components/ProductTable/products-table'
+import { Separator } from '../../components/Separator/separator'
 import { CARDS_CATEGORIES } from '../../utils/cardsCategories'
 
 export function Home() {
@@ -25,6 +26,8 @@ export function Home() {
       </section>
 
       <Separator />
+
+      <ProductsTable />
     </div>
   )
 }
