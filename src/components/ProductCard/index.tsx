@@ -25,7 +25,7 @@ export function ProductCard({ photo, productName, price }: ProductCardProps) {
           <span>Frete grátis</span>
         </div>
 
-        <Button title="comprar" />
+        <Button title="comprar" size="large" />
       </div>
     </div>
   )

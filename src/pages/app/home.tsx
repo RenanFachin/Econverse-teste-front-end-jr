@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 
 import { Banner } from '../../components/banner'
 import { CategoryCard } from '../../components/CategoryCard'
+import { PartnersAndProductBanner } from '../../components/PartnersAndProductBannerProps'
 import { ProductsCarousel } from '../../components/ProductsCarousel'
 import { ProductsTable } from '../../components/ProductTable'
 import { Separator } from '../../components/Separator'
@@ -15,7 +16,6 @@ export function Home() {
     <div>
       <Helmet title="Home" />
       <Banner />
-
       <section className="categories">
         {CARDS_CATEGORIES &&
           CARDS_CATEGORIES.map((category) => (
@@ -26,13 +26,42 @@ export function Home() {
             />
           ))}
       </section>
-
       <Separator />
-
       <ProductsTable />
+      <ProductsCarousel products={PRODUCTS} />
+
+      <section className="partners-container">
+        <PartnersAndProductBanner
+          title="Parceiros"
+          subTitle="Lorem ipsum dolor sit amet, consectetur"
+          imageURL="/partners-image.png"
+          buttonTitle="CONFIRA"
+        />
+
+        <PartnersAndProductBanner
+          title="Parceiros"
+          subTitle="Lorem ipsum dolor sit amet, consectetur"
+          imageURL="/partners-image.png"
+          buttonTitle="CONFIRA"
+        />
+      </section>
+
+      <Separator hasSubtitle subTitle="ver todos" />
 
       <section className="products-container">
-        <ProductsCarousel products={PRODUCTS} />
+        <PartnersAndProductBanner
+          title="Produtos"
+          subTitle="Lorem ipsum dolor sit amet, consectetur"
+          imageURL="/products-image.png"
+          buttonTitle="CONFIRA"
+        />
+
+        <PartnersAndProductBanner
+          title="Produtos"
+          subTitle="Lorem ipsum dolor sit amet, consectetur"
+          imageURL="/products-image.png"
+          buttonTitle="CONFIRA"
+        />
       </section>
     </div>
   )

@@ -15,7 +15,7 @@ interface ProductsCarouselProps {
 
 export function ProductsCarousel({ products }: ProductsCarouselProps) {
   return (
-    <section>
+    <section className="products-container">
       <Swiper
         cssMode={true}
         modules={[Navigation, A11y]}
