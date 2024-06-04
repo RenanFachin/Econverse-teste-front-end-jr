@@ -4,18 +4,16 @@ import { Helmet } from 'react-helmet-async'
 
 import { Banner } from '../../components/banner'
 import { CategoryCard } from '../../components/category-card'
+import { Separator } from '../../components/separator'
 import { CARDS_CATEGORIES } from '../../utils/cardsCategories'
 
 export function Home() {
   return (
     <div>
       <Helmet title="Home" />
+      <Banner />
 
-      <div>
-        <Banner />
-      </div>
-
-      <div className="categories">
+      <section className="categories">
         {CARDS_CATEGORIES &&
           CARDS_CATEGORIES.map((category) => (
             <CategoryCard
@@ -24,7 +22,9 @@ export function Home() {
               SvgIcon={category.SvgIcon}
             />
           ))}
-      </div>
+      </section>
+
+      <Separator />
     </div>
   )
 }

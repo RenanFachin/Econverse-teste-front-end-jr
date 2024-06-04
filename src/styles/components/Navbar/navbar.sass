@@ -19,10 +19,14 @@ nav
 
     li
       @include mixins.center
-      cursor: pointer          
+      cursor: pointer
+
+      &:hover
+        color: variables.$pink-500
 
       &.selected
         color: variables.$pink-500
-      
+        font-weight: variables.$font-bold
+
       &.withIcon
         gap: 12px
