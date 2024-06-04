@@ -1,0 +1,23 @@
+@use '../variables'
+@use '../mixins'
+
+#input-container
+  display: flex
+  align-items: center
+  justify-content: space-between
+  background-color: variables.$gray-200
+  padding: 10px 16px 10px 24px
+  border-radius: variables.$rounded-lg
+  min-width: 657px
+
+  input
+    @include mixins.reset-input
+    font-size: variables.$text-sm
+    flex: 1 1 0%
+    color: variables.$gray-500
+  
+  .icon
+    @include mixins.icon-lg
+    
+  
+  

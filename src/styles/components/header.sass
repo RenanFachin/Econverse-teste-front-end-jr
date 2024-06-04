@@ -1,0 +1,38 @@
+@use '../variables'
+@use '../mixins'  
+
+header
+  display: flex
+  flex-direction: column
+
+#header-content
+  @include mixins.center
+  flex-direction: row
+  justify-content: space-between
+  padding: 12px 56px
+  width: 100%
+  border-top: 1px solid variables.$border
+  border-bottom: 1px solid variables.$border
+
+.headerMessageBarContainer
+  width: 100%
+  height: 32px
+  display: flex
+  align-items: center
+  justify-content: space-evenly
+
+  .messages
+    @include mixins.center
+    gap: 9px
+    color: variables.$gray-500
+    font-size: variables.$text-xs
+
+    .icon
+      @include mixins.icon-default
+      
+    p
+      font-weight: variables.$font-medium
+
+    span
+      color: variables.$pink-500
+      font-weight: variables.$font-semibold
