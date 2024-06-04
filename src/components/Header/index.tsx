@@ -1,38 +1,36 @@
-import '../styles/components/header.sass'
+import '../../styles/components/Header/header.sass'
 
 import { CreditCard, ShieldCheck, Truck } from 'lucide-react'
 
 import { Input } from './input'
+import { MessageBar } from './message-bar'
 import { NavIcons } from './nav-icons'
 
 export function Header() {
   return (
     <header>
       <div className="headerMessageBarContainer">
-        <div className="messages">
-          <ShieldCheck size={20} />
+        <MessageBar Icon={ShieldCheck}>
           <p>
             Compra <span>100% segura</span>
           </p>
-        </div>
+        </MessageBar>
 
-        <div className="messages">
-          <Truck size={20} />
+        <MessageBar Icon={Truck}>
           <p>
             <span>Frete grátis</span> acima de R$ 200
           </p>
-        </div>
+        </MessageBar>
 
-        <div className="messages">
-          <CreditCard size={20} />
+        <MessageBar Icon={CreditCard}>
           <p>
             <span>Parcele</span> suas compras
           </p>
-        </div>
+        </MessageBar>
       </div>
 
       <div id="header-content">
-        <img src="/public/vtex-logo.png" alt="Logo VTEX" width={139} />
+        <img src="/vtex-logo.png" alt="Logo VTEX" width={139} />
 
         <Input />
 

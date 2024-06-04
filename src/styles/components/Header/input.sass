@@ -1,5 +1,5 @@
-@use '../variables'
-@use '../mixins'
+@use '../../variables'
+@use '../../mixins'
 
 #input-container
   display: flex
@@ -10,14 +10,20 @@
   border-radius: variables.$rounded-lg
   min-width: 657px
 
+  &.focused
+    outline: 2px solid variables.$pink-500
+
   input
     @include mixins.reset-input
     font-size: variables.$text-sm
     flex: 1 1 0%
     color: variables.$gray-500
-  
-  .icon
-    @include mixins.icon-lg
-    
-  
-  
+
+  button
+    background: none
+    border: none
+    outline: none
+    cursor: pointer
+
+    .icon
+      @include mixins.icon-lg

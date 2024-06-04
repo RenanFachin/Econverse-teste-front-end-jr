@@ -16,6 +16,9 @@ Home: http://localhost:5174/
 ## Melhorias no SEO da página
 Utilizando a lib react-helmet-async que permite a manipulação das META tags de cada página, além do uso de tags semânticas do HTML.
 
+## Inputs e Formulários
+Para manipualação dos formulários, caso fosse a pedida do desafio, já deixei configurado e definido as funções para manipulação do input. Utilizando a biblioteca react-hook-form e zod para validação.
+
 ## Executando o projeto
 
 Realizar o clone da aplicação

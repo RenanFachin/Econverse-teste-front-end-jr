@@ -1,5 +1,5 @@
-@use '../variables'
-@use '../mixins'  
+@use '../../variables'
+@use '../../mixins'  
 
 header
   display: flex
@@ -20,19 +20,3 @@ header
   display: flex
   align-items: center
   justify-content: space-evenly
-
-  .messages
-    @include mixins.center
-    gap: 9px
-    color: variables.$gray-500
-    font-size: variables.$text-xs
-
-    .icon
-      @include mixins.icon-default
-      
-    p
-      font-weight: variables.$font-medium
-
-    span
-      color: variables.$pink-500
-      font-weight: variables.$font-semibold

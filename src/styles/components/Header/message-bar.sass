@@ -1,0 +1,19 @@
+@use '../../variables'
+@use '../../mixins'  
+
+.messages
+  @include mixins.center
+  border: none
+  gap: 9px
+  color: variables.$gray-500
+  font-size: variables.$text-xs
+
+  .icon
+    @include mixins.icon-default
+
+  p
+    font-weight: variables.$font-medium
+
+  span
+    color: variables.$pink-500
+    font-weight: variables.$font-semibold
