@@ -7,14 +7,15 @@ import { Navbar } from '../../components/Navbar'
 
 export function AppLayout() {
   return (
-    <div id="container">
+    <div>
       <Header />
       <Navbar />
-
-      <main id="content">
-        {/* Contéudo da página */}
-        <Outlet />
-      </main>
+      <div id="container">
+        <main id="content">
+          {/* Contéudo da página */}
+          <Outlet />
+        </main>
+      </div>
     </div>
   )
 }
