@@ -1,4 +1,6 @@
-export function EsportesIcon(props) {
+interface EsportesIconProps extends React.SVGProps<SVGSVGElement> {}
+
+export function EsportesIcon(props: EsportesIconProps) {
   return (
     <svg
       width={61}

@@ -1,4 +1,6 @@
-export function FerramentasIcon(props) {
+interface FerramentasIconProps extends React.SVGProps<SVGSVGElement> {}
+
+export function FerramentasIcon(props: FerramentasIconProps) {
   return (
     <svg
       width={61}

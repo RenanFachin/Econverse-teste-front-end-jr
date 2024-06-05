@@ -1,4 +1,6 @@
-export function ModaIcon(props) {
+interface ModaIconProps extends React.SVGProps<SVGSVGElement> {}
+
+export function ModaIcon(props: ModaIconProps) {
   return (
     <svg
       width={63}

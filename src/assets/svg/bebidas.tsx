@@ -1,4 +1,6 @@
-export function BebidasIcon(props) {
+interface BebidasIconProps extends React.SVGProps<SVGSVGElement> {}
+
+export function BebidasIcon(props: BebidasIconProps) {
   return (
     <svg
       width={61}

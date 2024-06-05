@@ -1,4 +1,6 @@
-export function SaudeIcon(props) {
+interface SaudeIconProps extends React.SVGProps<SVGSVGElement> {}
+
+export function SaudeIcon(props: SaudeIconProps) {
   return (
     <svg
       width={61}

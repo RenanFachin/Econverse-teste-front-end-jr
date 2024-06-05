@@ -1,4 +1,6 @@
-export function TecnologiaIcon(props) {
+interface TecnologiaIconProps extends React.SVGProps<SVGSVGElement> {}
+
+export function TecnologiaIcon(props: TecnologiaIconProps) {
   return (
     <svg
       width={61}

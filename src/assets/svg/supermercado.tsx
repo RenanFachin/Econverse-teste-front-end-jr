@@ -1,4 +1,6 @@
-export function SupermercadoIcon(props) {
+interface SupermercadoIconProps extends React.SVGProps<SVGSVGElement> {}
+
+export function SupermercadoIcon(props: SupermercadoIconProps) {
   return (
     <svg
       width={61}
