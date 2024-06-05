@@ -1,4 +1,4 @@
-# HotWheels - CRUD
+# Teste técnico - Econverse
 Desenvolvimento de uma aplicação utilizando reactJS, sass e typescript para o teste técnico da Econverse.
 
 ## Framework (ViteJS)
@@ -7,11 +7,7 @@ O framework utilizado para elaboração do projeto foi o vitejs, que é um frame
 ## Rotas
 Visando a escalabilidade do projeto, as rotas foram criadas utilizadas a biblioteca react-router-dom.
 
-Todas páginas da aplicação foram envolvidas por um layout, que é um padrão que será utilizado para todas as rotas da aplicação.
-
-```bash
-Home: http://localhost:5174/
-```
+Todas páginas da aplicação foram envolvidas por um layout, que é um padrão que será utilizado para todas as rotas da aplicação, caso haja necessidade de aprimorar o projeto.
 
 ## Melhorias no SEO da página
 Utilizando a lib react-helmet-async que permite a manipulação das META tags de cada página, além do uso de tags semânticas do HTML.
@@ -24,7 +20,7 @@ Para manipualação dos formulários, caso fosse a pedida do desafio, já deixei
 Realizar o clone da aplicação
 
 ```bash
-git clone https://github.com/RenanFachin/PUCRS_subscription-control-system.git
+git clone https://github.com/RenanFachin/Econverse.git
 ```
 
 Instalar dependências

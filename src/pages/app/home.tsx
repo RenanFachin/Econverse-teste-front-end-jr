@@ -84,15 +84,15 @@ export function Home() {
               </div>
 
               <div id="social-icons">
-                <Link to={'/'}>
+                <Link to={'/'} aria-label="Facebook icon">
                   <Facebook size={22} />
                 </Link>
 
-                <Link to={'/'}>
+                <Link to={'/'} aria-label="Instagram icon">
                   <Instagram size={22} />
                 </Link>
 
-                <Link to={'/'}>
+                <Link to={'/'} aria-label="Youtube icon">
                   <Youtube size={22} />
                 </Link>
               </div>
@@ -135,8 +135,8 @@ export function Home() {
           </span>
 
           <div>
-            <img src="/econverse.png" alt="" />
-            <img src="/vtex.png" alt="" />
+            <img src="/econverse.png" alt="Econverse logo" />
+            <img src="/vtex.png" alt="Vtext logo" />
           </div>
         </div>
       </div>
