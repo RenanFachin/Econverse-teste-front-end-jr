@@ -1,0 +1,80 @@
+@use '../../variables'
+@use '../../mixins'
+
+.modal-overlay
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0,0,0,0.7)
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 100
+
+.modal-content
+  position: relative
+  background: variables.$white
+  padding: 20px
+  border-radius: 4px
+  min-width: 769px
+
+.close-icon
+  position: absolute
+  top: 20px
+  right: 30px
+  cursor: pointer
+
+  &:hover
+    color: variables.$pink-500
+
+.modal-container
+  display: flex
+  color: variables.$blue-500
+  gap: 87px
+
+.modal-details
+  display: flex
+  flex-direction: column
+  gap: 20px
+
+.modal-details h2
+  font-weight: variables.$font-normal
+  font-size: variables.$text-xl
+
+.modal-details p
+  font-weight: variables.$font-black
+  font-size: variables.$text-xl
+
+.modal-details span
+  font-size: variables.$text-xxs
+  line-height: 150.5%
+  max-width: 290px
+
+.modal-details a
+  display: flex
+  align-items: center
+  gap: 2px
+  font-size: variables.$text-xs
+  text-decoration: none
+  line-height: 100%
+
+.quantity
+  border: 1px solid #000
+  display: flex
+  align-items: center
+  justify-content: space-between
+  max-width: 110px
+  padding: 8px
+  border-radius: variables.$rounded-sm
+
+.quantity button
+  cursor: pointer
+
+  &:hover
+    color: variables.$pink-500
+
+.quantity input
+  @include mixins.reset-input
+  max-width: 20px
