@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 
 import { Banner } from '../../components/banner'
 import { CategoryCard } from '../../components/CategoryCard'
+import { NavCircle } from '../../components/NavCircle'
 import { PartnersAndProductBanner } from '../../components/PartnersAndProductBannerProps'
 import { ProductsCarousel } from '../../components/ProductsCarousel'
 import { ProductsTable } from '../../components/ProductTable'
@@ -63,6 +64,8 @@ export function Home() {
           buttonTitle="CONFIRA"
         />
       </section>
+
+      <NavCircle />
     </div>
   )
 }
