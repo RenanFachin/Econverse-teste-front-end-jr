@@ -32,21 +32,21 @@ export const PAYMENT_METHODS = [
   {
     id: 7,
     name: 'Pix',
-    image: '/public/pix.png',
+    image: '/pix.png',
   },
   {
     id: 8,
     name: 'American Express',
-    image: '/public/amex.png',
+    image: '/amex.png',
   },
   {
     id: 9,
     name: 'Ticket',
-    image: '/public/ticket.png',
+    image: '/ticket.png',
   },
   {
     id: 10,
     name: 'Sodexo',
-    image: '/public/sodexo.png',
+    image: '/sodexo.png',
   },
 ]
