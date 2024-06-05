@@ -71,59 +71,75 @@ export function Home() {
 
       <NavCircle />
 
-      <footer>
-        <section id="about-info-container">
-          <div id="about-container">
-            <p>Sobre nós</p>
+      <div>
+        <footer>
+          <section id="about-info-container">
+            <div id="about-container">
+              <p>Sobre nós</p>
 
-            <div>
-              <Link to={'/'}>Conheça</Link>
-              <Link to={'/'}>Como comprar</Link>
-              <Link to={'/'}>Indicação e Desconto</Link>
+              <div>
+                <Link to={'/'}>Conheça</Link>
+                <Link to={'/'}>Como comprar</Link>
+                <Link to={'/'}>Indicação e Desconto</Link>
+              </div>
+
+              <div id="social-icons">
+                <Link to={'/'}>
+                  <Facebook size={22} />
+                </Link>
+
+                <Link to={'/'}>
+                  <Instagram size={22} />
+                </Link>
+
+                <Link to={'/'}>
+                  <Youtube size={22} />
+                </Link>
+              </div>
             </div>
+            <div id="infos-container">
+              <p>INFORMAÇÕES ÚTEIS</p>
 
-            <div id="social-icons">
-              <Link to={'/'}>
-                <Facebook size={22} />
-              </Link>
-
-              <Link to={'/'}>
-                <Instagram size={22} />
-              </Link>
-
-              <Link to={'/'}>
-                <Youtube size={22} />
-              </Link>
+              <div>
+                <Link to={'/'}>FALE CONOSCO</Link>
+                <Link to={'/'}>DÚVIDAS</Link>
+                <Link to={'/'}>Prazos de Entrega</Link>
+                <Link to={'/'}>Formas de Pagamento</Link>
+                <Link to={'/'}>Política de privacidade</Link>
+                <Link to={'/'}>Trocas e Devoluções</Link>
+              </div>
             </div>
+            <div id="payment-methods-container">
+              <p>FORMAS DE PAGAMENTO</p>
+
+              <div>
+                {PAYMENT_METHODS.map((paymentMethod) => (
+                  <img
+                    key={paymentMethod.id}
+                    src={paymentMethod.image}
+                    alt={`Logo do ${paymentMethod.name}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+          <RegisterNewsletter />
+        </footer>
+
+        <div className="footerCopyright">
+          <span>
+            Copyright © 2019. Todos os direitos reservados. Todas as marcas e
+            suas imagens são de propriedade de seus respectivos donos. É vedada
+            a reprodução, total ou parcial, de qualquer conteúdo sem expressa
+            autorização.
+          </span>
+
+          <div>
+            <img src="/econverse.png" alt="" />
+            <img src="/vtex.png" alt="" />
           </div>
-          <div id="infos-container">
-            <p>INFORMAÇÕES ÚTEIS</p>
-
-            <div>
-              <Link to={'/'}>FALE CONOSCO</Link>
-              <Link to={'/'}>DÚVIDAS</Link>
-              <Link to={'/'}>Prazos de Entrega</Link>
-              <Link to={'/'}>Formas de Pagamento</Link>
-              <Link to={'/'}>Política de privacidade</Link>
-              <Link to={'/'}>Trocas e Devoluções</Link>
-            </div>
-          </div>
-          <div id="payment-methods-container">
-            <p>FORMAS DE PAGAMENTO</p>
-
-            <div>
-              {PAYMENT_METHODS.map((paymentMethod) => (
-                <img
-                  key={paymentMethod.id}
-                  src={paymentMethod.image}
-                  alt={`Logo do ${paymentMethod.name}`}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-        <RegisterNewsletter />
-      </footer>
+        </div>
+      </div>
     </div>
   )
 }
