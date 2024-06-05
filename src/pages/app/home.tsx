@@ -1,6 +1,8 @@
 import '../../styles/pages/Home/home.sass'
 
+import { Facebook, Instagram, Youtube } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 
 import { Banner } from '../../components/banner'
 import { CategoryCard } from '../../components/CategoryCard'
@@ -8,8 +10,10 @@ import { NavCircle } from '../../components/NavCircle'
 import { PartnersAndProductBanner } from '../../components/PartnersAndProductBannerProps'
 import { ProductsCarousel } from '../../components/ProductsCarousel'
 import { ProductsTable } from '../../components/ProductTable'
+import { RegisterNewsletter } from '../../components/RegisterNewsletter'
 import { Separator } from '../../components/Separator'
 import { CARDS_CATEGORIES } from '../../utils/cardsCategories'
+import { PAYMENT_METHODS } from '../../utils/payment-methods'
 import { PRODUCTS } from '../../utils/productsData'
 
 export function Home() {
@@ -66,6 +70,60 @@ export function Home() {
       </section>
 
       <NavCircle />
+
+      <footer>
+        <section id="about-info-container">
+          <div id="about-container">
+            <p>Sobre nós</p>
+
+            <div>
+              <Link to={'/'}>Conheça</Link>
+              <Link to={'/'}>Como comprar</Link>
+              <Link to={'/'}>Indicação e Desconto</Link>
+            </div>
+
+            <div id="social-icons">
+              <Link to={'/'}>
+                <Facebook size={22} />
+              </Link>
+
+              <Link to={'/'}>
+                <Instagram size={22} />
+              </Link>
+
+              <Link to={'/'}>
+                <Youtube size={22} />
+              </Link>
+            </div>
+          </div>
+          <div id="infos-container">
+            <p>INFORMAÇÕES ÚTEIS</p>
+
+            <div>
+              <Link to={'/'}>FALE CONOSCO</Link>
+              <Link to={'/'}>DÚVIDAS</Link>
+              <Link to={'/'}>Prazos de Entrega</Link>
+              <Link to={'/'}>Formas de Pagamento</Link>
+              <Link to={'/'}>Política de privacidade</Link>
+              <Link to={'/'}>Trocas e Devoluções</Link>
+            </div>
+          </div>
+          <div id="payment-methods-container">
+            <p>FORMAS DE PAGAMENTO</p>
+
+            <div>
+              {PAYMENT_METHODS.map((paymentMethod) => (
+                <img
+                  key={paymentMethod.id}
+                  src={paymentMethod.image}
+                  alt={`Logo do ${paymentMethod.name}`}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+        <RegisterNewsletter />
+      </footer>
     </div>
   )
 }

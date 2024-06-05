@@ -1,0 +1,50 @@
+@use '../../variables'
+@use '../../mixins'
+
+#register-newsletter-container
+  background: variables.$white
+  padding: 40px 32px
+  max-width: 380px
+  color: variables.$gray-700
+  border-radius: variables.$rounded-lg
+  display: flex
+  flex-direction: column
+
+#register-newsletter-container div
+  display: flex
+  flex-direction: column
+  gap: 15px
+  margin-bottom: 31px
+
+#register-newsletter-container div span
+  text-transform: uppercase
+  font-size: variables.$text-lg
+  font-weight: variables.$font-light
+  line-height: 26px
+
+#register-newsletter-container div span strong
+  text-transform: uppercase
+  font-size: variables.$text-xl
+  font-weight: variables.$font-bold
+
+#register-newsletter-container div p
+  text-align: center
+  line-height: 19px
+  color: variables.$gray-700
+  font-size: variables.$text-xs
+  font-weight: variables.$font-light
+
+#register-newsletter-container form
+  display: flex
+  align-items: center
+  gap: 9px
+
+#register-newsletter-container form input
+  @include mixins.reset-input
+  min-width: 230px
+  border: 1px solid variables.$gray-950
+  border-radius: variables.$rounded-sm
+  flex: 1 1 0%
+  padding-top: 12px
+  padding-bottom: 12px
+  padding-left: 25px

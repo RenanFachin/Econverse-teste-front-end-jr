@@ -25,3 +25,84 @@ div.swiper-button-prev, div.swiper-button-next
 .products-container
   @include mixins.centerAndBetween
   margin-top: 88px
+
+footer
+  background-color: variables.$gray-950
+  padding: 30px 93px
+  color: variables.$white
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  a
+    text-decoration: none
+    color: variables.$white
+
+#about-container
+  margin-right: 93px
+
+#about-container p
+  font-size: variables.$text-xs
+  font-weight: variables.$font-bold
+
+#about-container div
+  margin-top: 24px
+  margin-block: 30px
+  display: flex
+  flex-direction: column
+  gap: 12px
+  max-width: 150px
+
+#about-container div a
+  font-weight: variables.$font-light
+  text-transform: uppercase
+  font-size: variables.$text-xs
+
+  &:hover
+    color: variables.$pink-500
+
+#about-container #social-icons
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+#infos-container p
+  font-size: variables.$text-xs
+  font-weight: variables.$font-bold
+
+#infos-container div
+  margin-top: 24px
+  margin-block: 30px
+  display: flex
+  flex-direction: column
+  gap: 6px
+  max-width: 150px
+
+#infos-container div a
+  font-weight: variables.$font-light
+  text-transform: uppercase
+  font-size: variables.$text-xs
+
+  &:hover
+    color: variables.$pink-500
+
+#payment-methods-container
+  margin-left: 47px
+  max-width: 200px
+
+#payment-methods-container p
+  font-size: variables.$text-xs
+  font-weight: variables.$font-bold
+
+#payment-methods-container div
+  margin-top: 24px
+  margin-block: 30px
+  display: grid
+  align-items: center
+  gap: 12px
+  grid-template-columns: repeat(3, minmax(0, 1fr))
+
+#about-info-container
+  display: flex
+  align-items: center
+  justify-content: space-between
